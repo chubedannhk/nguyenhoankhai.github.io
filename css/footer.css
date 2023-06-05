@@ -1,0 +1,150 @@
+footer {
+    color: #fff;
+    padding: 5px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:#02853D;
+    
+  }
+
+  .container {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    height: 400px;
+    background-color:#02853D;
+  }
+
+  /* // column logo */
+  .column-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    cursor: pointer;
+  }
+  
+  .column-logo img {
+    width: 55%;
+    height: auto;
+  }
+  
+  .column-logo p {
+    margin: 20px 0px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color:#fff
+  }
+  .column-logo .footer-start-img-certificate{
+    width: 10%;
+    height: auto;
+  }
+
+  /* //end column logo */
+
+ .columns{
+    margin-bottom: 8%;
+    width: 30%;
+    font-weight: lighter;
+  }
+  .columns h3 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight:400;
+  }
+
+ .columns ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+ .columns ul li {
+    margin-bottom: 10px;
+  }
+
+ .columns ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  .columns ul li a:hover{
+    color: #002c14;
+    font-weight: normal;
+    
+  }
+/* 
+  // column trụ sở chính */
+  .column-2{
+ 
+    width: 30%;
+    font-weight: lighter;
+  }
+  .column-2 h3 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight:400;
+  }
+
+ .column-2 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+ .column-2 ul li {
+    margin-bottom: 10px;
+  }
+
+ .column-2  ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  /* end column trụ sở chính*/
+ /* end footer */
+ .copyright{
+  /* background-color: #02853D; */
+  background-color: #02853D;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+ }
+ .copyright .icon-end-footer a i{
+ 
+  padding: 15px 15px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  font-size: 13px;
+  color:#fff;
+  text-decoration: none;
+ }
+ .copyright .icon-end-footer a i:hover{
+  background-color: #fff;
+  color: #02853D;
+ }
+
+.p-copyright p a{
+  text-decoration: none;
+  color:#fff;
+}
+.p-copyright p a:hover{
+  color: #003518;
+  
+}
+.hr-end-footer{
+  border:1px solid #fff;
+  width: 60%;
+  margin-bottom: 10px;
+}

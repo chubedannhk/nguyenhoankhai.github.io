@@ -1,0 +1,87 @@
+
+ul {
+    list-style: none;
+  }
+  .main-partner {
+    overflow: hidden;
+    max-width: 60%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-bottom: 30px;
+  }
+  
+  .partner-title{
+    font-weight: bold;
+    padding-left: 10px;
+    color: #015727;
+    font-weight: 800;
+    padding-bottom: 30px;
+  }
+  .partner-title h1, .partner-title hr {
+    display: inline-block;
+    margin: 0;
+  }
+  
+  .partner-title hr {
+    width:85%;
+    max-width: 85%;
+  }
+  /* Layout */
+  .partner-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    width: 100%;
+    width: 1140px;
+    flex-wrap: wrap;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .partner-list li {
+    position: relative;
+    /* // */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f3f3f3;
+    margin: 0 20px;
+    padding: 0;
+    text-align: center;
+    /* width: 360px; */
+    width: calc(30% - 20px);
+    height: 270px;  
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+    border: 1px solid #c2c2c2; 
+    border-radius: 5%;
+    cursor: pointer;
+  }
+  
+  
+  .partner-list li:nth-child(3n) {
+    margin-right: 0;
+  }
+  .partner-list li:nth-child(3n+1) {
+    clear: left;
+  }
+  .partner-list li img {
+    width: 320px;
+    height: 270px;
+    position: relative;
+    transition: transform 0.5s ease;
+  } 
+  
+  .partner-list li a{
+    text-decoration: none;
+  }
+  
+  
+  /*hover */
+  
+  .partner-list li:hover img {
+    transform: scale(1.2); /* Giá trị scale để phóng to hình ảnh */
+  }

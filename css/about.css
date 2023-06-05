@@ -1,0 +1,92 @@
+.main{
+    margin: 0;
+    padding: auto;
+    color: #000;
+    font-family: Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+   
+  
+  .main-about-us {
+    width: 70%;
+    height: 550px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    overflow: hidden; /* đặt overflow: hidden để che giấu các phần tử con vượt ra ngoài phần tử cha */
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .image-about-us {
+    float: left;
+    width: 50%;
+    height: 500px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 5px;
+    position: relative;
+    background-color: #046410;
+    border: 1px solid #004113;
+    overflow: hidden; /* thêm overflow: hidden để che đậy các phần tử con vượt ra ngoài phần tử */
+    border-radius: 50%; /* áp dụng border-radius cho phần tử .image */
+     transform: skew(-10deg); 
+  }
+  
+  .image-about-us:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 100, 46, 0.5);
+    z-index: 1;
+  }
+  .image-about-us img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    border-radius: 50%; /* áp dụng border-radius cho phần tử img bên trong .image */
+     transform: skew(10deg); 
+     cursor: pointer;
+  
+  }
+  
+  
+  .content-about-us {
+    overflow: hidden; /* đặt overflow: hidden để khắc phục vấn đề về các phần tử con từ float */
+    margin-top: 60px;
+  }
+  .content-about-us h2{
+    font-size: 35px;
+    color:#0f4229;
+  }
+  .content-about-us p {
+    color:#01180d;
+    font-size: 18px;
+    font-weight:lighter;
+  }
+  .content-about-us button {
+    width: 180px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #348e35;
+    border: 1px solid #0f4229;
+    cursor: pointer;
+  }
+  .content-about-us button:hover{
+    border:1px solid #37f5ac;
+  }
+  .content-about-us button a{
+    font-size: 18px;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .content-about-us button a:hover{
+    color: #000;
+  }
+  
+  

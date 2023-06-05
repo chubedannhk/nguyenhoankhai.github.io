@@ -1,0 +1,297 @@
+*{
+  margin: 0;
+  padding: 0px;
+}
+/* // PHAN 1: HEADER NAVIGATION */
+ul{
+  list-style: none;
+}
+nav{
+  
+  /* background-color: #ecf0f1;  */
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding-left: 150px;
+  position: relative;
+  top:30px;
+}
+nav #main-menu li a{
+  color: #02853D;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  /* border-bottom:  1.5px solid #04823C; */
+}
+nav #main-menu li a:hover{
+  
+  background-color: #27ae60;
+  color:#fff;
+  transition: all 0.5s;
+}
+#main-menu{
+  display: flex;
+}
+#img-menu{
+display: inline-block;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ padding-left: 300px;
+ width: 160px;
+ height: 100px;
+ vertical-align: middle;
+ transition: transform 0.3s ease;
+}
+#img-menu:hover{
+  transform: scale(1.1);
+}
+/* icon khi o giao dien man hinh nho */
+#toggle-icon {
+  display: none;
+  background-color:#27ae60;
+  color:#fff;
+  text-align: right;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.icon-vietnam {
+  position: absolute;
+  top: 15px; /* Điều chỉnh vị trí bên trên */
+  left: 79%;
+  transform: translateX(-50%);
+ 
+}
+.icon-us {
+  position: absolute;
+  top: 15px; /* Điều chỉnh vị trí bên trên */
+  left: 82.5%;
+  transform: translateX(-150%);
+}
+.icon-menu-vn{
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+.icon-menu-vn:hover{
+  transform: scale(1.1);
+}
+
+
+/* CSS để ẩn 3 thẻ ban đầu */
+#main-menu li .sub-menu {
+  position: absolute;
+  top: 100%;
+  display: none;
+  z-index: 1; /* Lớp chồng lên */
+ 
+}
+
+/* CSS để hiển thị 3 thẻ khi hover lên mục "GIỚI THIỆU" */
+#main-menu li:hover .sub-menu {
+  display: block;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  border: 2px solid #04823C; /* Màu và kiểu viền */
+  border-bottom: 4px solid rgb(175, 0, 0);
+  font-size: 16px;
+  background-color: #fff;
+}
+/* vẫn hover thẻ cha khi re xuống thẻ con*/
+#main-menu li:hover > .sub-menu,
+#main-menu li .sub-menu:hover {
+  display: block;
+}
+
+#main-menu li:hover > a {
+  background-color: #27ae60;
+  color: #fff;
+}
+.sub-menu li a {
+  transition: transform 0.3s;
+}
+
+.sub-menu li a:hover {
+  transform: scale(1.05);
+}
+#main-menu > li > ul > li > a {
+  border-bottom: 1px solid #04823C;
+}
+#main-menu > li > ul > li > ul> li>a {
+  border-bottom: 1px solid #04823C;
+}
+
+/* // khi re vao the con thi xuat hien the chau */
+.sub-menu .sub-sub-menu {
+  display: none;
+  position: absolute;
+  top:0px;
+  left: 100%;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  border: 2px solid #04823C; /* Màu và kiểu viền */
+  border-bottom: 4px solid rgb(175, 0, 0);
+  width: 350px;
+  background-color: #fff;
+
+}
+
+.sub-menu li:hover > .sub-sub-menu {
+  display: block;
+}
+.sub-sub-menu-tbdn{
+  display: none;
+}
+.sub-menu li:hover > .sub-sub-menu-tbdn {
+  display: block;
+}
+#wrapper{
+  border-bottom: 1px solid #02853D;
+}
+
+/* //thay doi giao dien nav khi dung tren mobile */
+/* @media screen and (max-width: 768px){
+  #main-menu{flex-direction: column;}
+  #toggle-icon{
+    display: block;
+  }
+  nav{
+    display: none;
+  }
+} */
+
+
+
+/* //  PHAN 2: SLIDE IMAGES */
+
+img {
+  max-width: 100%;
+}
+.slider-container {
+  height: 800px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.slider-img {
+  position: absolute;
+  left: 50.8%;
+  z-index: 900;
+  width: auto;
+  bottom: 2em;
+  transform: translateX(-50%);
+  display: inline-block;
+  text-align: center;
+}
+.slider-img label {
+  cursor: pointer;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50px;
+  margin: 0 0.2em 1em;
+  border: 1px solid #028d52;
+  transition: all 0.3s ease;
+}
+.slider-img label:hover,
+.slider-img label:focus {
+  background: #028d52;
+  transform: scale(1.2);
+  border: 1px solid #e7e7e7;
+}
+.slide {
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  padding: 8em 1em 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: left 0s 0.75s;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 134, 67, 0.3); /* Màu sắc nhạt */
+}
+[id^="slide"]:checked + .slide {
+  left: 0;
+  z-index: 100;
+  transition: left 0.65s ease-out;
+}
+.slide-1 {
+  background-image: url("https://www.studytienganh.vn/upload/2017/09/273.jpg");
+}
+.slide-2 {
+  background-image: url("https://builtin.com/sites/www.builtin.com/files/styles/og/public/2023-03/SCADA.png");
+}
+.slide-3 {
+  background-image: url("https://www.ilcorrieredellasicurezza.it/wp-content/uploads/2022/03/SCADA.jpg");
+}
+.slide-4 {
+  background-image: url("https://www.mpcovn.com/files/2019/09/26/7-min-1024x768.png");
+}
+.slide h3 {
+  position: absolute;
+  bottom: 8em;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 3.5em;
+  transition: all 0.3s ease;
+  font-family: Tahoma;
+  z-index: 2;
+}
+.slide h3:hover {
+  color: #028d52;
+  cursor: pointer;
+}
+/* button doc them*/
+.slide a button {
+  position: absolute;
+  cursor: pointer;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: #348e38;
+  color: #fff;
+  border: 1px solid #028d52;
+  font-size: 20px;
+
+  padding: 20px;
+  width: 200px; 
+  bottom: 14em;
+  z-index: 2;
+  border-radius: 3%;
+}
+.slide a button:hover {
+  background-color: rgba(77, 218, 136, 0.5);
+  color:  #000000;
+  border: 1px solid #028d52;
+  opacity: 0.5;
+}
+.slide:checked h3 {
+  animation: fadein 0.5s linear forwards;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
